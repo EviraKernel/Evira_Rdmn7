@@ -34,6 +34,9 @@ static int cistpl_vers_1(struct mmc_card *card, struct sdio_func *func,
 	if (size < 2)
 		return 0;
 
+	if (size < 2)
+		return 0;
+
 	/* Find all null-terminated (including zero length) strings in
 	   the TPLLV1_INFO field. Trailing garbage is ignored. */
 	buf += 2;
